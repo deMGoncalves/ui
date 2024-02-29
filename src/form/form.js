@@ -1,4 +1,3 @@
-import * as filter from '@standard/filter'
 import * as std from '@standard'
 import formData from './formData'
 import style from './style'
@@ -22,7 +21,7 @@ class Form extends HTMLElement {
   }
 
   @std.on.submit('*')
-  @filter.prevent
+  @std.filter.prevent
   @validity
   @formData
   [Symbol('onSubmit')] (data) {

@@ -1,1 +1,1 @@
-export { default as prevent } from './prevent'
+export { default } from './filter'
