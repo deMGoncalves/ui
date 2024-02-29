@@ -1,5 +1,5 @@
 const validity = {
-  VALID: 'valid',
+  VALID: '',
   INVALID: 'invalid'
 }
 
