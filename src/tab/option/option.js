@@ -1,4 +1,5 @@
 import * as std from '@standard'
+import onSelect from './onSelect'
 import selectity from './selectity'
 import style from './style'
 
@@ -42,6 +43,13 @@ class Option extends HTMLElement {
   [Symbol('onClick')] () {
     this.#selectity = selectity.SELECTED
     this.parentElement.dispatchEvent(new CustomEvent('select', { detail: this.#value }))
+    return this
+  }
+
+  @onSelect
+  @std.repaint
+  [Symbol('onSelect')] (event) {
+    (this.#value !== event.detail) && (this.#selectity = selectity.UNSELECTED)
     return this
   }
 }
