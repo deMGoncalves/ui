@@ -3,7 +3,7 @@ const onSelect = (target, key) => {
 
   Object.defineProperty(target, 'connectedCallback', {
     value () {
-      this.parentElement.addEventListener('change', this[key].bind(this))
+      this.parentElement.addEventListener('select', this[key].bind(this))
       return overridden?.call(this)
     },
     writable: true

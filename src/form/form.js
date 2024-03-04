@@ -15,7 +15,7 @@ class Form extends HTMLElement {
   [Symbol('template')] () {
     return `
       <form class='${style.form}' novalidate>
-        ${this.querySelector('template').innerHTML}
+        ${this.innerHTML}
       </form>
     `
   }

@@ -22,7 +22,7 @@ module.exports = {
     port: process.env.PORT
   },
   entry: {
-    app: './src/index.js'
+    lib: './src/index.js'
   },
   module: {
     rules: [
@@ -76,6 +76,8 @@ module.exports = {
     clean: true,
     chunkFilename: '[name].[contenthash].js',
     filename: '[name].[contenthash].js',
+    library: 'UI',
+    libraryTarget: 'umd',
     path: path.resolve(__dirname, 'public'),
     publicPath: process.env.PUBLIC_PATH
   },

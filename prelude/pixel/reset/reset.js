@@ -9,7 +9,11 @@ const style = css`
     padding: 0;
   }
 
-  :host {
+  ui-form,
+  ui-name,
+  ui-submit,
+  ui-tab {
+    display: block;
     width: 100%;
   }
 `
