@@ -13,7 +13,7 @@ class Tab extends HTMLElement {
   [Symbol('template')] () {
     return `
       <div class='${style.tab}'>
-        ${this.innerHTML}
+        ${this.querySelector('template').innerHTML}
       </div>
     `
   }
